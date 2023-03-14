@@ -8,25 +8,26 @@ def caesercyper_fun(inputTxt, step):
         if datum in uppercase:
         
          indexx = uppercase.index(datum);
-         print(f"Index:", indexx)
+        #  print(f"Index:", indexx)
          chiperIndx = (indexx + step)%26 #### 26 change the index position....
         #  print(f"cipher alphabet:", cyperIndx)
          chiper.append(chiperIndx)
         #  print(chiper);
          newLatter = uppercase[chiperIndx]
          output.append(newLatter)
-         print(output)
+        #  print(output)
         elif datum in lowercase:
           indexx =lowercase.index(datum)
-          chiperIndex = (indexx + step)%26
-          chiper.append(chiperIndex)
-          newLatter = lowercase[chiperIndex]
-          output.append(newLatter)
+          chiperIndexForLowerCase = (indexx + step)%26
+          chiper.append(chiperIndexForLowerCase)
+          newLatterForLowerCase = lowercase[chiperIndexForLowerCase]
+          output.append(newLatterForLowerCase)
           print(output)
           return output
     # print("Test the fun")
-    
-caesercyper_fun("b", 2)
+    for i in output:
+             print(i)
+caesercyper_fun("ABC", 2)
    
     
     
