@@ -1,6 +1,8 @@
 def caesercyper_fun(inputTxt, step):
     chiper = []
     output = []
+    outputText = []
+    print(chiper)
     uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     
@@ -11,7 +13,7 @@ def caesercyper_fun(inputTxt, step):
         #  print(f"Index:", indexx)
          chiperIndx = (indexx + step)%26 #### 26 change the index position....
         #  print(f"cipher alphabet:", cyperIndx)
-         chiper.append(chiperIndx)
+        #  chiper.append(chiperIndx)
         #  print(chiper);
          newLatter = uppercase[chiperIndx]
          output.append(newLatter)
@@ -19,14 +21,16 @@ def caesercyper_fun(inputTxt, step):
         elif datum in lowercase:
           indexx =lowercase.index(datum)
           chiperIndexForLowerCase = (indexx + step)%26
-          chiper.append(chiperIndexForLowerCase)
+        #   chiper.append(chiperIndexForLowerCase)
           newLatterForLowerCase = lowercase[chiperIndexForLowerCase]
           output.append(newLatterForLowerCase)
           print(output)
           return output
     # print("Test the fun")
     for i in output:
-             print(i)
+            data = outputText.append(i)
+           
+    print(outputText)
 caesercyper_fun("ABC", 2)
    
     
